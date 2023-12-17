@@ -29,8 +29,8 @@ const NavBar = () => {
                 </span>
             </div>
             <nav className='hidden space-x-6 text-lg md:flex'>
-                {pages.map((v) => {
-                    return <NavLink data={v} />;
+                {pages.map((v, i) => {
+                    return <NavLink data={v} key={i} />;
                 })}
             </nav>
             <div className='items-center justify-end hidden md:flex md:flex-1 lg:w-0'>
