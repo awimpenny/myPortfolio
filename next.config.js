@@ -3,8 +3,6 @@
  * @type {import('next').NextConfig}
  */
 
-const nextConfig = {
-    darkMode: 'class',
-};
+const nextConfig = {};
 
 module.exports = nextConfig;

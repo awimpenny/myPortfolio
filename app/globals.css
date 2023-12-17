@@ -3,3 +3,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.general-ring-state {
+    @apply transition duration-500 ease-in-out hover:ring-4 dark:ring-white ring-black;
+}

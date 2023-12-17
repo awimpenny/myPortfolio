@@ -1,21 +1,19 @@
 /** @format */
 
-import type { Metadata } from 'next';
-import { GeistSans } from 'geist/font/sans';
+'use client';
+import '@/app/globals.css';
 import { ThemeProvider } from 'next-themes';
-import './globals.css';
-
-export const metadata: Metadata = {
-    title: 'Adam Wimpenny Portfolio',
-    description: 'My Personal Portfolio',
-};
+import NavBar from '@/components/navBar';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <ThemeProvider attribute='class'>
-            <html lang='en'>
-                <body className={GeistSans.className}>{children}</body>
-            </html>
-        </ThemeProvider>
+        <html lang='en'>
+            <body className='bg-white dark:bg-[#111827] min-h-screen overflow-hidden'>
+                <ThemeProvider enableSystem={true} attribute='class'>
+                    <NavBar />
+                    {children}
+                </ThemeProvider>
+            </body>
+        </html>
     );
 }
