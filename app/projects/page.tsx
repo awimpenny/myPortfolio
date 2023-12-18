@@ -46,8 +46,8 @@ const ProjectCard = (props: { data: Iprojects }) => {
     const tagStyle = 'inline-block bg-gray-200 dark:bg-[#2f2b2b] text-sm leading-5 mr-2 mb-2 px-4 py-2 rounded-full';
 
     return (
-        <div className='grid grid-cols-3 gap-10'>
-            <div className={`${props.data.flipped && 'order-3'} flex flex-col col-span-1`}>
+        <div className='grid lg:grid-cols-3 gap-10'>
+            <div className={`${props.data.flipped && 'lg:order-3'} flex flex-col col-span-1`}>
                 <div className='text-3xl font-bold tracking-wide'>
                     {props.data.title} <span className='text-base'>(Dec 2023)</span>
                 </div>
@@ -77,8 +77,8 @@ const ProjectCard = (props: { data: Iprojects }) => {
                 width={800}
                 height={800}
                 className={`${
-                    props.data.flipped && 'order-1'
-                } object-fill bg-no-repeat rounded-lg w-full h-full col-span-2`}
+                    props.data.flipped && 'lg:order-1'
+                } object-cover bg-no-repeat rounded-lg w-full h-full col-span-2`}
             />
         </div>
     );
