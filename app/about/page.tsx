@@ -11,11 +11,11 @@ const About = () => {
                 create something amazing together!
             </p>
             <div className='rounded-md italic p-5 bg-blue-500/20 text-md tracking-wide'>
-                "The original idea of the web was that it should be a collaborative space where you can communicate
+                &quot;The original idea of the web was that it should be a collaborative space where you can communicate
                 through sharing information. The idea was that by writing something together, and as people worked on
                 it, they could iron out misunderstanding, build common ground, and work towards consensus. The web is
                 read-write; it&apos;s not just people consuming. It&apos;s not just people producing. It&apos;s people
-                connecting, and we&apos;re still building it." - Tim Berners-Lee
+                connecting, and we&apos;re still building it.&quot; - Tim Berners-Lee
             </div>
             <p className='text-left mt-10 text-lg tracking-wide'>
                 I thrive on collaboration and meticulous problem-solving, ensuring every project I work on delivers not
