@@ -23,22 +23,29 @@ const NavBar = () => {
 
     return (
         <div className='flex items-center justify-between max-w-6xl px-4 py-6 mx-auto sm:px-6 md:space-x-10'>
-            <div className='flex justify-start lg:w-0 lg:flex-1'>
+            <div className='flex justify-start flex-1 z-10'>
                 <span className='relative w-10 h-10 justify-center'>
-                    <Image src={'/small_pfp.png'} alt='Profile Picture' fill objectFit='contain' />
+                    <a href='/'>
+                        <Image
+                            src={'/small_pfp.png'}
+                            alt='Profile Picture'
+                            fill
+                            className='rounded-md object-contain'
+                        />
+                    </a>
                 </span>
             </div>
-            <nav className='hidden space-x-6 text-lg md:flex'>
+            <nav className='hidden space-x-6 text-lg md:flex z-10'>
                 {pages.map((v, i) => {
                     return <NavLink data={v} key={i} />;
                 })}
             </nav>
-            <div className='items-center justify-end hidden md:flex md:flex-1 lg:w-0'>
+            <div className='items-center justify-end hidden md:flex md:flex-1 z-10'>
                 <button
                     onClick={() => setTheme(currentTheme === 'light' ? 'dark' : 'light')}
                     aria-label='Toggle Dark Mode'
                     type='button'
-                    className='flex items-center justify-center w-12 h-12 bg-gray-200 rounded-full dark:bg-[#1e293b] text-2xl general-ring-state '
+                    className='flex items-center justify-center w-12 h-12 bg-gray-200 rounded-md dark:bg-[#2f2b2b] text-2xl general-ring-state '
                 >
                     <LuSun className='hidden dark:block' />
                     <LuMoonStar className='dark:hidden text-black' />
@@ -61,7 +68,7 @@ const NavLink = (props: {
             className="font-bold text-gray-900 dark:text-gray-200 'hidden md:inline-block p-1 sm:px-6 sm:py-2 rounded-full hover:text-blue-500 dark:hover:text-blue-500 transition-all"
             href={props.data.link}
         >
-            <span className={`py-1 border-b-2 border-transparent ${path === props.data.link && 'border-blue-500'} `}>
+            <span className={`py-1 border-b-2 ${path === props.data.link ? 'border-blue-500' : 'border-transparent'}`}>
                 {props.data.label}
             </span>
         </a>

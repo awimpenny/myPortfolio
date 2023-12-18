@@ -8,10 +8,12 @@ import NavBar from '@/components/navBar';
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang='en'>
-            <body className='bg-white dark:bg-[#111827] min-h-screen overflow-hidden'>
+            <body>
                 <ThemeProvider enableSystem={true} attribute='class'>
-                    <NavBar />
-                    {children}
+                    <div className='bg-white dark:bg-[#181616] min-h-screen overflow-hidden'>
+                        <NavBar />
+                        {children}
+                    </div>
                 </ThemeProvider>
             </body>
         </html>
