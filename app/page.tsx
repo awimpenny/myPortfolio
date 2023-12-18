@@ -4,8 +4,8 @@ import Image from 'next/image';
 
 export default function Home() {
     return (
-        <main className='flex flex-col mx-auto max-w-6xl justify-center px-4 relative'>
-            <div className='absolute top-0 left-0 right-0 z-0'>
+        <main>
+            <div className='absolute top-0 left-0 right-0 -z-10'>
                 <div className='absolute overflow-visible opacity-50 dark:opacity-30 left-6 top-14'>
                     <div className='mix-blend-multiply absolute w-[600px] h-[600px] rounded-[40rem] circle-obj'></div>
                 </div>
@@ -13,7 +13,7 @@ export default function Home() {
                     <div className='mix-blend-multiply absolute w-[600px] h-[600px] rounded-[40rem] circle-obj2'></div>
                 </div>
             </div>
-            <div className='grid grid-cols-1 items-center mt-12 text-center md:mt-24 md:text-left md:grid-cols-6 z-10'>
+            <div className='grid grid-cols-1 items-center mt-12 text-center md:mt-24 md:text-left md:grid-cols-6'>
                 <h1 className='mb-5 col-span-5 order-2 text-4xl leading-tight tracking-wider md:leading-normal sm:text-5xl font-bold md:order-1'>
                     I&apos;m <span className='text-blue-500'>Adam</span>. A full stack developer, sharing my journey in
                     pursuit of excellence.
@@ -29,7 +29,7 @@ export default function Home() {
                     </span>
                 </div>
             </div>
-            <div className='space-y-6 md:space-y-0 md:space-x-4 z-10'>
+            <div className='flex flex-col space-y-6 md:space-y-0 md:space-x-4 md:flex-row'>
                 <a href='/projects'>
                     <button
                         aria-label='button'
@@ -50,6 +50,56 @@ export default function Home() {
                 </a>
             </div>
             <hr className="h-10 w-full text-center my-16 border-none before:text-2xl before:leading-8 before:text-black  dark:before:text-gray-300 before:content-['~_~_~']"></hr>
+            <div>
+                <h2 className='text-4xl font-bold tracking-wide mb-5 md:mb-6 text-center md:text-left'>
+                    A selection of my favorite projects.
+                </h2>
+                <p className='text-lg mb-3 md:mb-5 text-center md:text-left'>Check out some of my favourite pieces.</p>
+                <ProjectsList />
+            </div>
         </main>
     );
 }
+
+interface Iprojects {
+    img: string;
+    desc: string;
+    link: string;
+}
+
+const ProjectsList = () => {
+    const projects: Iprojects[] = [
+        {
+            img: '/crystaldetails.jpg',
+            desc: 'A car valeting template website I made for fun.',
+            link: 'https://www.crystaldetails.co.uk/',
+        },
+        {
+            img: '/evolve.jpg',
+            desc: 'A clinic that does tattoos, pmu and much more..',
+            link: 'https://evol-ve.com/',
+        },
+    ];
+
+    return (
+        <div className='gap-5 grid grid-cols-1 md:grid-cols-2 w-full mb-16'>
+            {projects.map((v: Iprojects, i: number) => {
+                return (
+                    <div className='flex flex-col bg-gray-200 dark:bg-[#2f2b2b] p-4 rounded-lg w-full' key={i}>
+                        <a href={v.link} target='_blank'>
+                            <Image
+                                src={v.img}
+                                alt=''
+                                width={600}
+                                height={600}
+                                className='object-cover bg-no-repeat rounded-lg w-full h-[300px]'
+                            />
+                        </a>
+
+                        <h3 className='text-lg mt-4'>{v.desc}</h3>
+                    </div>
+                );
+            })}
+        </div>
+    );
+};
