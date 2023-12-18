@@ -15,7 +15,7 @@ export default function Home() {
             </div>
             <div className='grid grid-cols-1 items-center mt-12 text-center md:mt-24 md:text-left md:grid-cols-6 z-10'>
                 <h1 className='mb-5 col-span-5 order-2 text-4xl leading-tight tracking-wider md:leading-normal sm:text-5xl font-bold md:order-1'>
-                    I'm <span className='text-blue-500'>Adam</span>. A full stack developer, sharing my journey in
+                    I&apos;m <span className='text-blue-500'>Adam</span>. A full stack developer, sharing my journey in
                     pursuit of excellence.
                 </h1>
                 <div className='order-1 md:order-2'>
