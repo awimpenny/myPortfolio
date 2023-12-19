@@ -32,7 +32,7 @@ const Projects = () => {
         },
         {
             title: 'Evol-ve',
-            img: '/evolve.jpg',
+            img: '/evol-ve.jpg',
             flipped: true,
         },
     ];
