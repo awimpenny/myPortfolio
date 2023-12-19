@@ -63,6 +63,7 @@ export default function Home() {
 
 interface Iprojects {
     img: string;
+    title: string;
     desc: string;
     link: string;
 }
@@ -71,11 +72,13 @@ const ProjectsList = () => {
     const projects: Iprojects[] = [
         {
             img: '/crystaldetails.jpg',
+            title: 'Crystal Details',
             desc: 'A car valeting template website I made for fun.',
             link: 'https://www.crystaldetails.co.uk/',
         },
         {
             img: '/evolve.jpg',
+            title: 'Evol-ve',
             desc: 'A clinic that does tattoos, pmu and much more..',
             link: 'https://evol-ve.com/',
         },
@@ -95,8 +98,18 @@ const ProjectsList = () => {
                                 className='object-cover bg-no-repeat rounded-lg w-full h-[300px]'
                             />
                         </a>
-
-                        <h3 className='text-lg mt-4'>{v.desc}</h3>
+                        <h2 className='text-lg mt-4 mb-2'>{v.title}</h2>
+                        <h3 className='text-sm mb-4'>{v.desc}</h3>
+                        <hr />
+                        <a href={v.link} target='_blank'>
+                            <button
+                                aria-label='button'
+                                type='button'
+                                className='mt-4 text-sm md:w-auto md:inline-flex py-2 px-1 md:px-12 rounded-md w-full bg-[#2f2b2b] dark:bg-white text-white dark:text-black items-center justify-center general-ring-state font-medium'
+                            >
+                                Visit {v.title}
+                            </button>
+                        </a>
                     </div>
                 );
             })}
