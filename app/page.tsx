@@ -14,11 +14,11 @@ export default function Home() {
                 </div>
             </div>
             <div className='grid grid-cols-1 items-center mt-12 text-center md:mt-24 md:text-left md:grid-cols-6'>
-                <h1 className='mb-5 col-span-5 order-2 text-4xl leading-tight tracking-wider md:leading-normal sm:text-5xl font-bold md:order-1'>
-                    I&apos;m <span className='text-blue-500'>Adam</span>. A full stack developer, sharing my journey in
+                <h1 className='mb-8 col-span-5 order-2 text-3xl leading-tight tracking-wider md:leading-normal sm:text-5xl font-bold md:order-1'>
+                    I&apos;m <span className='text-blue-500'>Adam</span>. A full stack developer sharing my journey in
                     pursuit of excellence.
                 </h1>
-                <div className='order-1 md:order-2'>
+                <div className='mb-4 md:mb-0 order-1 md:order-2'>
                     <span className='inline-block overflow-hidden w-[160px] h-[160px] bg-none relative'>
                         <Image
                             src={'/small_pfp.png'}
@@ -90,14 +90,9 @@ const ProjectsList = () => {
                 return (
                     <div className='flex flex-col bg-gray-200 dark:bg-[#2f2b2b] p-4 rounded-lg w-full' key={i}>
                         <a href={v.link} target='_blank'>
-                            <Image
-                                src={v.img}
-                                alt=''
-                                width={600}
-                                height={600}
-                                className='object-cover bg-no-repeat rounded-lg w-full h-[300px]'
-                            />
+                            <Image src={v.img} alt='' width={900} height={900} className='object-fill rounded-lg' />
                         </a>
+
                         <h2 className='text-lg mt-4 mb-2'>{v.title}</h2>
                         <h3 className='text-sm mb-4'>{v.desc}</h3>
                         <hr />
