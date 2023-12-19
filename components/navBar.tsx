@@ -64,9 +64,7 @@ const NavBar = () => {
                         <div className='p-0.5'>
                             <FiMenu
                                 onClick={() => setMenuOpen(!menuOpen)}
-                                className={`${
-                                    menuOpen ? 'ring-0' : 'general-ring-state'
-                                } ml-auto mb-auto p-2 text-4xl cursor-pointer rounded-md`}
+                                className={'ml-auto mb-auto p-2 text-4xl cursor-pointer rounded-md'}
                             />
                         </div>
                     </div>
@@ -77,7 +75,7 @@ const NavBar = () => {
                         type='button'
                         className={`${
                             menuOpen ? 'flex' : 'hidden'
-                        } my-5 text-base w-[90%] flex items-center justify-center py-3 bg-gray-300 rounded-md dark:bg-black/20 general-ring-state`}
+                        } my-5 text-base w-[90%] flex items-center justify-center py-3 bg-gray-300 rounded-md dark:bg-black/20`}
                     >
                         <div>
                             <LuSun className='hidden dark:block text-xl' />
