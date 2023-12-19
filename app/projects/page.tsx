@@ -13,7 +13,7 @@ const Projects = () => {
     const projects: Iprojects[] = [
         {
             title: 'Crystal Details',
-            desc: 'Worked with the design and marketing team to developer a responsive web application built from ground up using WordPress PHP framework, with high focus on design suitable for all platforms and Search Engine Optimization, to achieve the best online presence and highest rankings.',
+            desc: 'Worked with them to developer a responsive web application built from ground up using the NextJS framework, with high focus on design suitable for all platforms and Search Engine Optimization, to achieve the best online presence and highest rankings.',
             tags: ['JavaScript', 'Html', 'CSS', 'UI/UX'],
             link: 'https://www.crystaldetails.co.uk/',
             flipped: false,
@@ -25,7 +25,7 @@ const Projects = () => {
         },
         {
             title: 'Evol-ve',
-            desc: 'Worked with the design and marketing team to developer a responsive web application built from ground up using WordPress PHP framework, with high focus on design suitable for all platforms and Search Engine Optimization, to achieve the best online presence and highest rankings.',
+            desc: 'Worked with this client for an extensive time to truly achive what they were after. Once finished I made sure that the (SEO) was done correctly to achive the best online presence.',
             tags: ['JavaScript', 'Html', 'CSS', 'UI/UX'],
             link: 'https://evol-ve.com/',
             flipped: true,
