@@ -48,7 +48,7 @@ const NavBar = () => {
                     <div className='flex'>
                         <span className='sr-only'>Open menu</span>
                         <div className={`${menuOpen ? 'flex' : 'hidden'} w-[250px]`}>
-                            <div className='flex flex-col gap-4 '>
+                            <div role='list' className='flex flex-col gap-4 '>
                                 <a href='/' className='pl-4 pt-4'>
                                     Home
                                 </a>

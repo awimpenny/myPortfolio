@@ -2,6 +2,8 @@
 import Image from 'next/image';
 interface Iprojects {
     title: string;
+    emoji?: string;
+    date?: string;
     desc?: string;
     img?: string;
     tags?: string[];
@@ -13,6 +15,8 @@ const Projects = () => {
     const projects: Iprojects[] = [
         {
             title: 'Crystal Details',
+            emoji: '🧽',
+            date: 'Dec 2023',
             desc: 'Worked with them to developer a responsive web application built from ground up using the NextJS framework, with high focus on design suitable for all platforms and Search Engine Optimization, to achieve the best online presence and highest rankings.',
             tags: ['JavaScript', 'Html', 'CSS', 'UI/UX'],
             link: 'https://www.crystaldetails.co.uk/',
@@ -25,6 +29,8 @@ const Projects = () => {
         },
         {
             title: 'Evol-ve',
+            emoji: '💉',
+            date: 'not-complete',
             desc: 'Worked with this client for an extensive time to truly achive what they were after. Once finished I made sure that the (SEO) was done correctly to achive the best online presence.',
             tags: ['JavaScript', 'Html', 'CSS', 'UI/UX'],
             link: 'https://evol-ve.com/',
@@ -75,8 +81,8 @@ const ProjectCard = (props: { data: Iprojects }) => {
 
     return (
         <div className={`${props.data.flipped && 'lg:order-3'} flex flex-col col-span-1`}>
-            <div className='text-3xl font-bold tracking-wide'>
-                {props.data.title} <span className='text-sm'>(Dec 2023)</span>
+            <div className='text-3xl font-bold tracking-wide md:whitespace-nowrap'>
+                {props.data.emoji} {props.data.title} <span className='text-sm'>({props.data.date})</span>
             </div>
             <div className='text-lg mt-10 tracking-wide'>{props.data.desc}</div>
             <p className='mt-5'>
