@@ -77,7 +77,7 @@ const ProjectsList = () => {
             link: 'https://www.crystaldetails.co.uk/',
         },
         {
-            img: '/evolve.jpg',
+            img: '/evol-ve.jpg',
             title: 'Evol-ve',
             desc: 'A clinic that does tattoos, pmu and much more..',
             link: 'https://evol-ve.com/',
@@ -90,7 +90,7 @@ const ProjectsList = () => {
                 return (
                     <div className='flex flex-col bg-gray-200 dark:bg-[#2f2b2b] p-4 rounded-lg w-full' key={i}>
                         <a href={v.link} target='_blank'>
-                            <Image src={v.img} alt='' width={900} height={900} className='object-fill rounded-lg' />
+                            <Image src={v.img} alt='' width={1920} height={1080} className='object-fill rounded-lg' />
                         </a>
 
                         <h2 className='text-lg mt-4 mb-2'>{v.title}</h2>
