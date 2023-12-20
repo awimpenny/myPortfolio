@@ -1,4 +1,5 @@
 /** @format */
+import ContactForm from '@/components/about/contact';
 
 const About = () => {
     return (
@@ -22,6 +23,7 @@ const About = () => {
                 just visually stunning designs but also top-notch functionality.
             </p>
             <hr className="h-10 w-full text-center my-16 border-none before:text-2xl before:leading-8 before:text-black  dark:before:text-gray-300 before:content-['~_~_~']"></hr>
+            <ContactForm />
         </main>
     );
 };
