@@ -71,7 +71,9 @@ const ProjectCard = (props: { data: Iprojects }) => {
                             alt={props.data.title}
                             width={800}
                             height={800}
-                            className={`${props.data.flipped && 'lg:order-1'} rounded-lg`}
+                            className={`${
+                                props.data.flipped && 'lg:order-1'
+                            } rounded-lg border-gray-600/20 dark:border-gray-200/20 border-4`}
                         />
                     </div>
                 </div>
