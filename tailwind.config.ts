@@ -17,6 +17,11 @@ const config: Config = {
             },
         },
     },
+    variants: {
+        extend: {
+            backgroundColor: ['disabled'],
+        },
+    },
     plugins: [],
 };
 export default config;

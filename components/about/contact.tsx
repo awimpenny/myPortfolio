@@ -96,7 +96,7 @@ const ContactForm = () => {
                         aria-label='button'
                         type='submit'
                         disabled={loading}
-                        className='disabled:bg-red-500 disabled:text-black disabled:ring-red-500 col-span-2 mt-5 text-sm py-2 px-1 md:px-12 rounded-md w-full bg-[#2f2b2b] dark:bg-white text-white dark:text-black general-ring-state font-medium'
+                        className='disabled:bg-red-500 disabled:pointer-events-none disabled:text-white disabled:ring-red-500 col-span-2 mt-5 text-sm py-2 px-1 md:px-12 rounded-md w-full enabled:bg-[#2f2b2b] dark:enabled:bg-white enabled:text-white dark:enabled:text-black general-ring-state font-medium'
                     >
                         {!loading ? 'Submit' : 'loading...'}
                     </button>
