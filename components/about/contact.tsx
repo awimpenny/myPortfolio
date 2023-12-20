@@ -34,8 +34,8 @@ const ContactForm = () => {
 
     return (
         <>
-            <h1 className='text-lg md:text-xl text-center text-blue-500 mb-2 tracking-wide'>GET IN TOUCH</h1>
-            <h2 className='text-3xl md:text-4xl text-center tracking-wide font-bold mb-10'>Contact Me</h2>
+            <div className='text-lg md:text-xl text-center text-blue-500 mb-2 tracking-wide'>GET IN TOUCH</div>
+            <div className='text-3xl md:text-4xl text-center tracking-wide font-bold mb-10'>Contact Me</div>
             <div className='grid gap-10 md:gap-0 grid-cols-1 md:grid-cols-7 w-full justify-center mb-20'>
                 <div className='flex flex-col w-full gap-10 md:col-span-3 h-full justify-evenly'>
                     <div className='text-lg flex gap-5 w-full dark:bg-[#2f2b2b] bg-gray-200 p-4 rounded-md items-center'>
