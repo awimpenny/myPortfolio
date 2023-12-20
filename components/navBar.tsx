@@ -2,7 +2,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { LuSun, LuMoonStar } from 'react-icons/lu';
 import { FiMenu } from 'react-icons/fi';
@@ -81,9 +81,8 @@ const NavBar = () => {
                             <LuSun className='hidden dark:block text-xl' />
                             <LuMoonStar className='dark:hidden text-black text-xl' />
                         </div>
-                        <p className='ml-3 font-semibold'>
-                            Change to {currentTheme === 'light' ? 'dark' : 'light'} theme
-                        </p>
+                        <div className='ml-3 font-semibold dark:hidden'>Change to dark theme</div>
+                        <div className='ml-3 font-semibold hidden dark:block'>Change to light theme</div>
                     </button>
                 </div>
             </div>
