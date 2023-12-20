@@ -1,5 +1,6 @@
 /** @format */
 import Image from 'next/image';
+import ContactForm from '@/components/about/contact';
 interface Iprojects {
     title: string;
     emoji?: string;
@@ -54,6 +55,8 @@ const Projects = () => {
                     return <ProjectCard data={v} key={i} />;
                 })}
             </div>
+            <hr className="h-10 w-full text-center my-16 border-none before:text-2xl before:leading-8 before:text-black  dark:before:text-gray-300 before:content-['~_~_~']"></hr>
+            <ContactForm />
         </main>
     );
 };

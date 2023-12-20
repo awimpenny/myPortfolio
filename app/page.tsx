@@ -1,6 +1,7 @@
 /** @format */
 
 import Image from 'next/image';
+import ContactForm from '@/components/about/contact';
 
 export default function Home() {
     return (
@@ -57,6 +58,8 @@ export default function Home() {
                 <p className='text-lg mb-3 md:mb-5 text-center md:text-left'>Check out some of my favourite pieces.</p>
                 <ProjectsList />
             </div>
+            <hr className="h-10 w-full text-center my-16 border-none before:text-2xl before:leading-8 before:text-black  dark:before:text-gray-300 before:content-['~_~_~']"></hr>
+            <ContactForm />
         </main>
     );
 }
