@@ -73,7 +73,7 @@ const ProjectCard = (props: { data: Iprojects }) => {
     const tagStyle = 'inline-block bg-gray-200 dark:bg-[#2f2b2b] text-sm leading-5 mr-2 mb-2 px-4 py-2 rounded-full';
 
     return (
-        <div className={`${props.data.flipped && 'lg:order-3'} flex flex-col col-span-1 h-full`}>
+        <div className={`${props.data.flipped && 'lg:order-3'} flex flex-col col-span-1`}>
             <div className='text-3xl font-bold tracking-wide whitespace-pre-line md:whitespace-nowrap'>
                 {props.data.emoji} {props.data.title} <span className='text-sm'>({props.data.date})</span>
             </div>
