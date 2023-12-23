@@ -53,13 +53,10 @@ const Projects = () => {
             <h2 className='text-3xl md:text-4xl text-center tracking-wide font-bold mb-20'>
                 Check out some of my work.
             </h2>
-            <div className='flex flex-col w-full mb-10 gap-y-10 lg:gap-y-24'>
+            <div className='flex flex-col w-full mb-10 gap-10 lg:gap-24'>
                 {projects.map((v: Iprojects, i: number) => {
                     return (
-                        <div
-                            key={i}
-                            className='grid grid-cols-1 lg:grid-cols-3 gap-x-12 gap-y-10 lg:gap-y-24 w-full h-full'
-                        >
+                        <div key={i} className='grid grid-cols-1 lg:grid-cols-3 gap-x-12 gap-y-10 lg:gap-y-24'>
                             <ProjectCard data={v} />
                             <ProjectImg data={v} />
                         </div>
@@ -72,35 +69,15 @@ const Projects = () => {
     );
 };
 
-const ProjectImg = (props: { data: Iprojects }) => {
-    return (
-        <div className='md:col-span-2 m-auto'>
-            <div className='grid grid-cols-1 gap-4 lg:grid-cols-5'>
-                <div className='relative col-span-5 overflow-hidden rounded-lg'>
-                    <Image
-                        src={props.data.img}
-                        alt={props.data.title}
-                        width={800}
-                        height={800}
-                        className={`${
-                            props.data.flipped && 'lg:order-1'
-                        } rounded-lg border-gray-600/20 dark:border-gray-200/20 border-4`}
-                    />
-                </div>
-            </div>
-        </div>
-    );
-};
-
 const ProjectCard = (props: { data: Iprojects }) => {
     const tagStyle = 'inline-block bg-gray-200 dark:bg-[#2f2b2b] text-sm leading-5 mr-2 mb-2 px-4 py-2 rounded-full';
 
     return (
-        <div className={`${props.data.flipped && 'lg:order-3'} flex flex-col col-span-1 h-full justify-evenly`}>
+        <div className={`${props.data.flipped && 'lg:order-3'} flex flex-col col-span-1 h-full`}>
             <div className='text-3xl font-bold tracking-wide whitespace-pre-line md:whitespace-nowrap'>
                 {props.data.emoji} {props.data.title} <span className='text-sm'>({props.data.date})</span>
             </div>
-            <div className='text-lg mt-10 tracking-wide'>{props.data.desc}</div>
+            <div className='text-lg mt-5 md:mt-10 tracking-wide'>{props.data.desc}</div>
             <p className='mt-5'>
                 {props.data.tags?.map((v: string, i: number) => {
                     return (
@@ -119,6 +96,26 @@ const ProjectCard = (props: { data: Iprojects }) => {
                     Visit {props.data.title}
                 </button>
             </a>
+        </div>
+    );
+};
+
+const ProjectImg = (props: { data: Iprojects }) => {
+    return (
+        <div className='md:col-span-2 w-full'>
+            <div className='grid grid-cols-1 gap-4 lg:grid-cols-5'>
+                <div className='relative col-span-5 overflow-hidden rounded-lg'>
+                    <Image
+                        src={props.data.img}
+                        alt={props.data.title}
+                        width={800}
+                        height={800}
+                        className={`${
+                            props.data.flipped && 'lg:order-1'
+                        } rounded-lg border-gray-600/20 dark:border-gray-200/20 border-4 w-full mx-auto`}
+                    />
+                </div>
+            </div>
         </div>
     );
 };
