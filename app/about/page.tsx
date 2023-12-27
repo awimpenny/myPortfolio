@@ -1,7 +1,13 @@
 /** @format */
+'use client';
+
 import ContactForm from '@/components/about/contact';
+import Image from 'next/image';
+import React from 'react';
 
 const About = () => {
+    const [open, setOpen] = React.useState<boolean>(false);
+
     return (
         <main>
             <h1 className='text-lg md:text-xl text-center text-blue-500 mt-10 mb-2 tracking-wide'>ABOUT ME</h1>
@@ -22,6 +28,23 @@ const About = () => {
                 I thrive on collaboration and meticulous problem-solving, ensuring every project I work on delivers not
                 just visually stunning designs but also top-notch functionality.
             </p>
+            <button
+                aria-label='button'
+                type='button'
+                className='mt-5 md:w-auto md:inline-flex py-3 px-2 md:px-12 rounded-md w-full bg-white text-black dark:bg-[#2f2b2b] dark:text-white items-center justify-center general-ring-state font-medium'
+                onClick={() => {
+                    setOpen(!open);
+                }}
+            >
+                {open ? 'Close' : 'View'} Resume
+            </button>
+            <Image
+                src={'/resume.jpg'}
+                alt='Resume'
+                width={613}
+                height={792}
+                className={`${open ? 'block' : 'hidden'} mt-5 rounded-sm`}
+            />
             <hr className="h-10 w-full text-center my-16 border-none before:text-2xl before:leading-8 before:text-black  dark:before:text-gray-300 before:content-['~_~_~']"></hr>
             <ContactForm />
         </main>
