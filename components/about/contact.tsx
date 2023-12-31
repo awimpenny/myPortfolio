@@ -40,7 +40,7 @@ const ContactForm = () => {
                 <div className='flex flex-col w-full gap-10 md:col-span-3 h-full justify-evenly'>
                     <div className='text-lg flex gap-5 w-full dark:bg-[#2f2b2b] bg-gray-200 p-4 rounded-md items-center'>
                         <FaPhoneAlt className='text-xl' />
-                        <a href='tel:07545410930'>+44 07545410930</a>
+                        <a href='tel:07545410930'>+44 7545410930</a>
                     </div>
 
                     <div className='text-lg flex gap-5 w-full dark:bg-[#2f2b2b] bg-gray-200 p-4 rounded-md items-center'>
